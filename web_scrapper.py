@@ -8,7 +8,7 @@ import os
 
 
 def course_info(course_id):
-    PATH = '/Users/harveyfu/Desktop/pythonProject/DSCI551/Group_Project/chromedriver'
+    PATH = 'chromedriver'
     driver = webdriver.Chrome(PATH)
     course_dic = {}
     course_new_id = str()
@@ -109,7 +109,7 @@ def course_info(course_id):
 
 
 def instructor_info(instructor_name):
-    PATH = '/Users/harveyfu/Desktop/pythonProject/DSCI551/Group_Project/chromedriver'
+    PATH = 'chromedriver'
     driver = webdriver.Chrome(PATH)
     url = 'https://uscdirectory.usc.edu/web/directory/faculty-staff/'
     driver.get(url)
