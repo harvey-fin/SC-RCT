@@ -3,6 +3,9 @@ Final Project for DSCI 551
 
 ------------------------------------
 package & software installations:
+
+UPDATE: The requirements.txt is added to the repository
+
 install a chromedriver under the same folder as web_scrapper.py
 for more information about chromedriver, visit https://chromedriver.chromium.org/downloads
 
