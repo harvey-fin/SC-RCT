@@ -63,7 +63,7 @@ def course_info(course_id):
     search = driver.find_element(by=By.NAME, value='filter[keyword]')
     search.clear()
     search.send_keys(course_id)
-    search.send_keys(Keys.RETURN)
+    search.submit()
     time.sleep(0.2)
 
     link = driver.find_element(by=By.XPATH, value='//a[contains(.,\'Best Match\')]')
