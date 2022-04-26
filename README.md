@@ -1,6 +1,8 @@
 # SC-RCT
 Final Project for DSCI 551
+App Deployed at https://share.streamlit.io/harvey-fin/sc-rct/main/main.py
 
+If running the App on Your Localhost:
 ------------------------------------
 package & software installations:
 
