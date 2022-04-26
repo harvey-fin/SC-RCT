@@ -1,6 +1,5 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-import chromedriver_autoinstaller
 import pandas as pd
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -9,16 +8,9 @@ import re
 import os
 from webdriver_manager.utils import ChromeType
 
-chromedriver_autoinstaller.install()
-#Chrome options
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument("--disable-infobars")
-chrome_options.add_argument('--disable-dev-shm-usage')
-
 
 def course_info(course_id):
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     course_dic = {}
     course_new_id = str()
     for item in course_id:
@@ -118,7 +110,7 @@ def course_info(course_id):
 
 
 def instructor_info(instructor_name):
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     url = 'https://uscdirectory.usc.edu/web/directory/faculty-staff/'
     driver.get(url)
     search = driver.find_element(by=By.NAME, value='q')
