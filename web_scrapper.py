@@ -8,9 +8,9 @@ import re
 import os
 from webdriver_manager.utils import ChromeType
 
+webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
 def course_info(course_id):
-    webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
     driver = webdriver.Chrome(ChromeDriverManager().install())
     course_dic = {}
     course_new_id = str()
@@ -111,7 +111,6 @@ def course_info(course_id):
 
 
 def instructor_info(instructor_name):
-    webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
     driver = webdriver.Chrome(ChromeDriverManager().install())
     url = 'https://uscdirectory.usc.edu/web/directory/faculty-staff/'
     driver.get(url)
