@@ -1,5 +1,4 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -7,10 +6,24 @@ import time
 import re
 import os
 from webdriver_manager.utils import ChromeType
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from webdriver_manager.firefox import GeckoDriverManager
 
+firefoxOptions = Options()
+firefoxOptions.add_argument("--headless")
+service = Service(GeckoDriverManager().install())
 
 def course_info(course_id):
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Firefox(
+    options=firefoxOptions,
+    service=service,
+    )
     course_dic = {}
     course_new_id = str()
     for item in course_id:
@@ -110,7 +123,10 @@ def course_info(course_id):
 
 
 def instructor_info(instructor_name):
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Firefox(
+    options=firefoxOptions,
+    service=service,
+    )
     url = 'https://uscdirectory.usc.edu/web/directory/faculty-staff/'
     driver.get(url)
     search = driver.find_element(by=By.NAME, value='q')
