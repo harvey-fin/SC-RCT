@@ -147,7 +147,10 @@ def instructor_info(instructor_name):
     instructor_dic['department'] = department.text
     instructor_dic['division'] = division.text
     instructor_dic['email'] = email.text
+    if instructor_dic:
+        driver.quit()
     return instructor_dic
+    
 
 
 if __name__ == '__main__':
