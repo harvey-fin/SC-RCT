@@ -15,11 +15,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.firefox import GeckoDriverManager
 
-firefoxOptions = Options()
-firefoxOptions.add_argument("--headless")
-service = Service(GeckoDriverManager().install())
 
 def course_info(course_id):
+    firefoxOptions = Options()
+    firefoxOptions.add_argument("--headless")
+    service = Service(GeckoDriverManager().install())
     driver = webdriver.Firefox(
     options=firefoxOptions,
     service=service,
@@ -123,6 +123,9 @@ def course_info(course_id):
 
 
 def instructor_info(instructor_name):
+    firefoxOptions = Options()
+    firefoxOptions.add_argument("--headless")
+    service = Service(GeckoDriverManager().install())
     driver = webdriver.Firefox(
     options=firefoxOptions,
     service=service,
