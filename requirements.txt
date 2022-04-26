@@ -1,4 +1,4 @@
 requests==2.27.1
-selenium
+selenium==2.25.0
 webdriver-manager
 
