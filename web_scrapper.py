@@ -6,7 +6,9 @@ from selenium.webdriver.common.by import By
 import time
 import re
 import os
+from webdriver_manager.utils import ChromeType
 
+webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
 
 def course_info(course_id):
     driver = webdriver.Chrome(ChromeDriverManager().install())
