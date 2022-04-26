@@ -36,7 +36,7 @@ def interface_page():
 
     if choice2 == 'Course':
         ci.course_selection(user_name)
-    if choice2 == 'Discussion Board':
+    if choice2 == 'Course Ratings':
         di.course_selection(user_name)
     if choice2 == 'Search For Professors':
         instructor_name = st.sidebar.text_input('Please enter the name of the professor: ')
