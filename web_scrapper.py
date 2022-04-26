@@ -1,4 +1,5 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -8,8 +9,7 @@ import os
 
 
 def course_info(course_id):
-    PATH = 'chromedriver'
-    driver = webdriver.Chrome(PATH)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     course_dic = {}
     course_new_id = str()
     for item in course_id:
@@ -109,8 +109,7 @@ def course_info(course_id):
 
 
 def instructor_info(instructor_name):
-    PATH = 'chromedriver'
-    driver = webdriver.Chrome(PATH)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     url = 'https://uscdirectory.usc.edu/web/directory/faculty-staff/'
     driver.get(url)
     search = driver.find_element(by=By.NAME, value='q')
