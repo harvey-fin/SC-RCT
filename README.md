@@ -25,8 +25,8 @@ pip install selenium
 ```
 Other packages that is commonly used: pandas, requests, datetime
 
------------------------------------
 Error Handling:
+-----------------------------------
 There could be module conflict with the click module due to updates of the click package.
 In short, ```AttributeError: module 'click' has no attribute 'get_os_args'``` occured because click.get_os_args deprecated on module ```click 8.1.0```
 the way to handle this is more clearly explained in this link: https://github.com/streamlit/streamlit/issues/4555
@@ -38,8 +38,8 @@ It is important that you enter the course ID in correct format: 'ABCD123', and t
 
 It is possible that you might encounter some error during webscrapping, it might be because of the network connection speed. Please consider refreshing the page and do it again!
 
-------------------------------------
 How to compile the code in terminal:
+------------------------------------
 
 in terminal, do
 ```
